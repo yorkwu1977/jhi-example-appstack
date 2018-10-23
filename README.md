@@ -1,8 +1,7 @@
 # jhi-example-appstack
 
-#### 项目介绍
-Jhipster生成的微服务架构的应用栈示例。
+#### Introduction
+This is a full App Stack of microservice architecture, Generate by Jhipster。
 
-#### 使用说明
-
+#### Usage
 <a href="https://www.cnblogs.com/yorkwu/p/9335968.html" target="_blank">https://www.cnblogs.com/yorkwu/p/9335968.html</a>
