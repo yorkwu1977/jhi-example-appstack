@@ -1,0 +1,26 @@
+
+{
+    "gatewayApp": {
+        "microservice1Role" : {
+            "home": {
+                "title": "Roles",
+                "createLabel": "创建新 Role",
+                "createOrEditLabel": "创建或编辑 Role"
+            },
+            "delete": {
+                "question": "你确定要删除 Role {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "Role"
+            },
+            "roleName": "Role Name"
+        }
+    },
+    "microservice1App": {
+        "microservice1Role" : {
+            "created": "Role {{ param }} 创建成功",
+            "updated": "Role {{ param }} 更新成功",
+            "deleted": "Role {{ param }} 删除成功"
+        }
+    }
+}

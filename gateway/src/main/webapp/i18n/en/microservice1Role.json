@@ -1,0 +1,26 @@
+
+{
+    "gatewayApp": {
+        "microservice1Role" : {
+            "home": {
+                "title": "Roles",
+                "createLabel": "Create a new Role",
+                "createOrEditLabel": "Create or edit a Role"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Role {{ id }}?"
+            },
+            "detail": {
+                "title": "Role"
+            },
+            "roleName": "Role Name"
+        }
+    },
+    "microservice1App": {
+        "microservice1Role" : {
+            "created": "A new Role is created with identifier {{ param }}",
+            "updated": "A Role is updated with identifier {{ param }}",
+            "deleted": "A Role is deleted with identifier {{ param }}"
+        }
+    }
+}
