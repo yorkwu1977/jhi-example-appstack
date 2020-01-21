@@ -12,5 +12,5 @@ This is a full App Stack of microservice architecture, Generate by Jhipster。
 --- | --- | ---
 gateway | 路由网关 | Swagger UI，APM UI 
 uaa | 认证服务 |
-microservice1 |示例微服务|微服务之间调用，熔断器编写和配置。
+microservice1 |示例微服务|微服务之间通过uaa认证调用，熔断器编写和配置。
 
