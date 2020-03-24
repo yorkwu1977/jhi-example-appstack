@@ -1,0 +1,103 @@
+application {
+  config {
+    baseName uaa
+    applicationType uaa
+    packageName com.yourcompany.appstack.uaa
+    serverPort 9999
+    authenticationType uaa
+    uaaBaseName "uaa"
+    databaseType sql
+    devDatabaseType mysql
+    prodDatabaseType mysql
+    serviceDiscoveryType eureka
+    cacheProvider ehcache
+    nativeLanguage zh-cn
+    languages [ zh-cn, en ]
+    buildTool maven
+    testFrameworks [ gatling ]
+    skipClient true
+  }
+}
+
+application {
+  config {
+    baseName gateway
+    applicationType gateway
+    authenticationType uaa
+    packageName com.yourcompany.appstack.gateway
+    serverPort 8080
+    uaaBaseName "uaa"
+    databaseType sql
+    devDatabaseType mysql
+    prodDatabaseType mysql
+    serviceDiscoveryType eureka
+    cacheProvider ehcache
+	clientFramework angularX,
+    nativeLanguage zh-cn
+    languages [ zh-cn, en ]
+    buildTool maven
+    testFrameworks [ gatling ]
+  }
+  entities * 
+}
+
+application {
+  config {
+    baseName appone
+    applicationType microservice
+    authenticationType uaa
+    packageName com.yourcompany.appstack.appone
+    serverPort 8081
+    uaaBaseName "uaa"
+    databaseType sql
+    devDatabaseType mysql
+    prodDatabaseType mysql
+    serviceDiscoveryType eureka
+    cacheProvider hazelcast
+    nativeLanguage zh-cn
+    languages [ zh-cn, en ]
+    buildTool maven
+    skipClient true
+  }
+  entities Book, Movie
+}
+
+application {
+  config {
+    baseName apptwo
+    applicationType microservice
+    authenticationType uaa
+    packageName com.yourcompany.appstack.apptwo
+    serverPort 8082
+    uaaBaseName "uaa"
+    databaseType sql
+    devDatabaseType mysql
+    prodDatabaseType mysql
+    serviceDiscoveryType eureka
+    cacheProvider hazelcast
+    nativeLanguage zh-cn
+    languages [ zh-cn, en ]
+    buildTool maven
+    skipClient true
+  }
+  entities Radio
+}
+
+entity Book {
+    name String
+}
+
+entity Movie {
+    name String
+}
+
+entity Radio {
+    name String
+}
+
+dto * with mapstruct
+service * with serviceClass
+paginate * with pagination
+microservice Book, Movie with appone
+microservice Radio with apptwo
+```
